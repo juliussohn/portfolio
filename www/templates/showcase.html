@@ -1,0 +1,13 @@
+<div class="wrapper showcase">
+    <div class="title">
+        <h1>{{showcase.title}}</h1>
+        <a  data-text="visit website"  target="_blank" ng-if="showcase.url" class="button" href="{{showcase.url}}">visit website</a>
+    </div>
+    <div class="description">
+        <p>{{showcase.description}}</p>
+    </div>
+    <div class="gallery">
+
+    	<img ng-repeat="img in showcase.images" ng-src="/img/work/{{img}}">
+    </div>
+</div>
