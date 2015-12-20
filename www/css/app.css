@@ -1,3 +1,18 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'gtw';
+  src: url("fonts/gt-walsheim-web.eot");
+  font-weight: normal;
+  src: url("fonts/gt-walsheim-web.eot?#iefix") format("embedded-opentype"), url("fonts/gt-walsheim-web.woff") format("woff"), url("fonts/gt-walsheim-web.ttf") format("truetype"), url("fonts/gt-walsheim-web.svg#svgFontName") format("svg");
+  /* Ältere iOS-Geräte */ }
+
+@font-face {
+  font-family: 'gtw';
+  src: url("fonts/gt-walsheim-medium-web.eot");
+  font-weight: 500;
+  src: url("fonts/gt-walsheim-medium-web.eot?#iefix") format("embedded-opentype"), url("fonts/gt-walsheim-medium-web.woff") format("woff"), url("fonts/gt-walsheim-medium-web.ttf") format("truetype"), url("fonts/gt-walsheim-medium-web.svg#svgFontName") format("svg");
+  /* Ältere iOS-Geräte */ }
+
 * {
   box-sizing: border-box; }
 
@@ -36,7 +51,7 @@ a.button {
 body, html {
   padding: 0;
   margin: 0;
-  font-family: "GT Walsheim"; }
+  font-family: "gtw"; }
 
 body {
   background: #F7F7F7;
@@ -55,7 +70,7 @@ img {
   width: 100%; }
 
 h1 {
-  font-weight: 400; }
+  font-weight: 500; }
 
 header {
   padding: 30px; }
@@ -81,6 +96,8 @@ nav {
       nav ul li a {
         font-size: 24px;
         display: block; }
+        nav ul li a.active {
+          animation: hover-animation 2s infinite; }
         nav ul li a:hover {
           animation: hover-animation 2s infinite; }
 
@@ -102,7 +119,7 @@ nav {
   0%, 100% {
     fill: #6E70F7; }
   25% {
-    fill: #71EF8C; }
+    fill: #57EF83; }
   50% {
     fill: #EFD94E; }
   75% {
@@ -112,7 +129,7 @@ nav {
   0%, 100% {
     color: #6E70F7; }
   25% {
-    color: #71EF8C; }
+    color: #57EF83; }
   50% {
     color: #EFD94E; }
   75% {
@@ -175,9 +192,9 @@ nav {
   .work-teaser:nth-child(1):hover .button, .work-teaser:nth-child(1):hover .image {
     box-shadow: 6px 6px 0 rgba(110, 112, 247, 0.6); }
   .work-teaser:nth-child(2):hover h1 {
-    text-shadow: 6px 6px 0 rgba(113, 239, 140, 0.6); }
+    text-shadow: 6px 6px 0 rgba(87, 239, 131, 0.6); }
   .work-teaser:nth-child(2):hover .button, .work-teaser:nth-child(2):hover .image {
-    box-shadow: 6px 6px 0 rgba(113, 239, 140, 0.6); }
+    box-shadow: 6px 6px 0 rgba(87, 239, 131, 0.6); }
   .work-teaser:nth-child(3):hover h1 {
     text-shadow: 6px 6px 0 rgba(239, 217, 78, 0.6); }
   .work-teaser:nth-child(3):hover .button, .work-teaser:nth-child(3):hover .image {
@@ -195,7 +212,7 @@ nav {
     .about-container article:nth-child(1) h1 {
       color: #6E70F7; }
     .about-container article:nth-child(2) h1 {
-      color: #71EF8C; }
+      color: #57EF83; }
     .about-container article:nth-child(3) h1 {
       color: #FF9B9B; }
     .about-container article:nth-child(4) h1 {

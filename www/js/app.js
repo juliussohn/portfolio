@@ -23,7 +23,7 @@ app.config(function ($routeProvider, $locationProvider) {
         })
         .when('/work/:workSlug', {
             templateUrl: 'templates/showcase.html',
-            activeTab: 'showcase',
+            activeTab: 'work',
             controller: 'WorkController',
         })
        
@@ -34,10 +34,16 @@ app.config(function ($routeProvider, $locationProvider) {
 });
 
 app.run(function ($rootScope, $location, $http) {
+    $rootScope.$on("$routeChangeStart", function (event, next, current) {
+        $rootScope.$route = next;
+       
+    });
    
 });
 
-app.controller('MainController', function ($scope, $rootScope) {
+app.controller('MainController', function ($scope, $rootScope, $route) {
+    $scope.$route = $route.current;
+    console.log($scope.$route);
 
 });
 app.controller('ShowcaseController', function ($scope, $routeParams) {
@@ -81,6 +87,7 @@ app.controller('WorkController', function ($scope, $rootScope, $routeParams) {
             title:"type patterns",
             slug:"type-patterns",
              url:"http://juliussohn.github.io/type-patterns",
+             description:"Type patterns is a litte web app that I made for my application at the University of Applied Science in Berlin. It creates stroke patterns from your keyboard inputs depending on the key poisiton on the keyboard. Every strong has it's unique pattern that you can share with others.",
              images:[
               "tp-type.jpg",
                 "type-patterns.png"
@@ -91,6 +98,7 @@ app.controller('WorkController', function ($scope, $rootScope, $routeParams) {
             title:"jorge alexander",
             slug:"jorge-alexander",
              url:"http://jorgealexander.de",
+             description: "This is a  branding I made for a friend who studies fashion design. The logo is made up the first letters of his first and second name (Jorge Alexander). I also made a litte website for him to publish his projects.",
              images:[
                 "jorge-alexander.png",
                 "ja-website.jpg",
@@ -100,6 +108,7 @@ app.controller('WorkController', function ($scope, $rootScope, $routeParams) {
         {
             title:"20 squares",
             slug:"20-squares",
+            description:"20 squares is a company I founded with 2 friends. We are creating a instagram photobook that you can create via an web or mobile app in a few minutes. You can browse instagram profiles, search for tags and select every public photo on isntagram.The apps focus on easy and fast handling. ",
             images:[
                 "20squares-logo.png"
             ]

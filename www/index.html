@@ -15,9 +15,9 @@
 <h1><a href="/#/">julius sohn</a></h1>
 	<nav>
 		<ul>
-			<li><a href="/#/work">work</a></li>
-			<li><a href="/#/about">about</a></li>
-			<li><a href="/#/contact">contact</a></li>
+			<li><a ng-class="{'active':$root.$route.activeTab=='work'}" href="/#/work">work</a></li>
+			<li><a ng-class="{'active':$root.$route.activeTab=='about'}" href="/#/about">about</a></li>
+			<li><a ng-class="{'active':$root.$route.activeTab=='contact'}" href="/#/contact">contact</a></li>
 		</ul>
 	</nav>
 </header>

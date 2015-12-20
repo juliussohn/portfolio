@@ -3,11 +3,35 @@
 
 //@import "components/";
 //@import "pages/";
+//
+
+
+@font-face {
+   font-family: 'gtw';
+   src: url( "fonts/gt-walsheim-web.eot");
+   font-weight: normal;
+   src: url('fonts/gt-walsheim-web.eot?#iefix') format('embedded-opentype'),  /* IE6-IE8 */
+      url('fonts/gt-walsheim-web.woff') format('woff'),             /* Moderne Browser */
+      url('fonts/gt-walsheim-web.ttf') format('truetype'),     /* Safari, Android, iOS */
+      url('fonts/gt-walsheim-web.svg#svgFontName') format('svg'); /* Ältere iOS-Geräte */
+}
+
+@font-face {
+   font-family: 'gtw';
+   src: url( "fonts/gt-walsheim-medium-web.eot");
+   font-weight: 500;
+   src: url('fonts/gt-walsheim-medium-web.eot?#iefix') format('embedded-opentype'),  /* IE6-IE8 */
+      url('fonts/gt-walsheim-medium-web.woff') format('woff'),             /* Moderne Browser */
+      url('fonts/gt-walsheim-medium-web.ttf') format('truetype'),     /* Safari, Android, iOS */
+      url('fonts/gt-walsheim-medium-web.svg#svgFontName') format('svg'); /* Ältere iOS-Geräte */
+}
+
+
 $color-1: #6E70F7;
 
 $color-1-transparent: rgba($color-1, 0.6);
 
-$color-2: #71EF8C;
+$color-2: #57EF83;
 $color-2-transparent: rgba($color-2, 0.6);
 
 $color-3: #EFD94E;
@@ -66,7 +90,7 @@ a.button {
 body, html {
     padding: 0;
     margin: 0;
-    font-family: "GT Walsheim";
+    font-family: "gtw";
 }
 
 body {
@@ -91,7 +115,7 @@ img {
 }
 
 h1 {
-    font-weight: 400;
+    font-weight: 500;
 }
 
 header {
@@ -126,6 +150,9 @@ nav {
             a {
                 font-size: 24px;
                 display: block;
+                &.active{
+                	 animation: hover-animation 2s infinite;
+                }
 
                 &:hover {
                     animation: hover-animation 2s infinite;
