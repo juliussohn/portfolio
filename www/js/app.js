@@ -54,16 +54,16 @@ app.controller('AboutController', function ($scope, $rootScope, $window) {
     $scope.about = [
         {
             title:"Who I am.",
-            text:"I am a 22 year old designer and developer studying communication design at the University of Applied Science in Berlin ..."
+            text:"I am a 22 year old designer and developer studying communication design at the University of Applied Science in Berlin."
         },
 
         {
             title:"What I do.",
-            text:"Corporate Design, UX Design, HTML, CSS, Javscript, AngularJS, PHP"
+            text:"Corporate Design, UI/UX Design, HTML, CSS, Javscript, AngularJS, jQuery, PHP, SQL"
         },
          {
             title:"Who I worked for.",
-            text:"Sparkasse, Filmnächte am Elbufer, Zukunft Training, Filmakademie Baden-Württemberg Palais Sommer, Meisterwerke Neo"
+            text:"Sparkasse, Volks- und Raiffeisenbanken, Bayer, BER, Hanse Yachts, Filmnächte am Elbufer, Zukunft Training, Filmakademie Baden-Württemberg Palais Sommer Dresden, Meisterwerke Neo"
         },
 
         ];
@@ -105,10 +105,19 @@ app.controller('WorkController', function ($scope, $rootScope, $routeParams) {
                 "ja-collages.jpg"
              ]
         },
+         {
+            title:"slap.js",
+            slug:"slap-js",
+             url:"https://github.com/juliussohn/slap.js",
+            description:"Slap.js is a small jQuery Plugin I wrote just for fun. It give you the ability to make elements on your site slapable ;)",
+            images:[
+                "slap-js.png"
+            ]
+        },
         {
             title:"20 squares",
             slug:"20-squares",
-            description:"20 squares is a company I founded with 2 friends. We are creating a instagram photobook that you can create via an web or mobile app in a few minutes. You can browse instagram profiles, search for tags and select every public photo on isntagram.The apps focus on easy and fast handling. ",
+            description:"20 squares is a company I founded with 2 friends. We are creating a instagram photobook that you can create via an web or mobile app in a few minutes. You can browse instagram profiles, search for tags and select every public photo on instagram. The apps focus on easy and fast handling. Work in progress.",
             images:[
                 "20squares-logo.png"
             ]
