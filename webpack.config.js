@@ -1,5 +1,5 @@
 module.exports = {
-    entry: "./entry.js",
+    entry: "./src/entry.js",
     output: {
         path: __dirname+"/build/",
         filename: "bundle.js"
@@ -21,6 +21,17 @@ module.exports = {
                     {
                         loader: 'file-loader',
                         options: {}
+                    }
+                ]
+            },
+            {
+                test: /\.(html)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[name].[ext]'
+                        }
                     }
                 ]
             }]
