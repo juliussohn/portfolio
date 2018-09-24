@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" type="image/png" href="../images/favicon.png"/>
+    <title>{{ htmlWebpackPlugin.options.data.title }}</title>
+    <script src="https://use.typekit.net/nqv0sqn.js"></script>
+    <script>try {
+        Typekit.load({ async: true });
+    } catch ( e ) {
+    }</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108825602-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-108825602-1');
+        var trackOutboundLink = function(url,type) {
+            gtag('event', 'click', {
+                'event_category': 'outbound-'+type,
+                'event_label': url,
+                'transport_type': 'beacon',
+                'event_callback': function(){document.location = url;}
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="top-section">
+    <div class="about-text">
+        <h1>Hi, my name is Julius. I am a Berlin based designer and developer, creating digital products for humans. I love building things from first draft to final release.</h1>
+        <div class="detail-text">
+            <p>I recently handed in my bachelor thesis <a href="https://refresh.study" target="_blank" class="external">Refresh</a>. <br/>I work for <a href="http://goodpatch.com" target="_blank" class="external">Goodpatch</a> – a Tokyo
+                and Berlin based product design studio.</p>
+            <p>In the past years I have been self employed, co-founded a digital design agency and a social photo book start-up. Then and now I mostly create websites, mobile apps
+                and corporate designs, while being involved of the whole creation process.</p>
+            <p>I am thrilled about crafting awesome things out of nothing, combining my skills in UX, UI and brand design as well as frontend and backend development.</p>
+
+        </div>
+    </div>
+
+    <div class="portrait-image">
+        <div id="portrait-image-loaded"></div>
+
+    </div>
+</div>
+<div class="work-section">
+    <div class="work-wrap">
+        {{#each htmlWebpackPlugin.options.data.work}}
+            <div class="work-item">
+                <div class="work-info">
+
+                    <h3>
+                        {{#if this.url}} <a onclick="trackOutboundLink('{{this.url}}','work')" href="{{this.url}}" target="_blank" title="{{this.title}}" class="external no-wrap">{{/if}}
+                        {{this.title}}
+                        {{#if this.url}} </a>{{/if}}
+                    </h3>
+
+                    <div class="period"> {{this.period}}</div>
+                </div>
+                <div class="skills">
+                    <ul>
+                        {{#each this.skills}}
+                            <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+        {{/each}}
+    </div>
+</div>
+<footer>
+    <ul>
+        {{#each htmlWebpackPlugin.options.data.links}}
+            <li><a onclick="trackOutboundLink('{{this.url}}','social')" href="{{this.url}}" target="_blank" class="external">{{this.title}}</a></li>
+        {{/each}}
+
+    </ul>
+</footer>
+</body>
+</html>
